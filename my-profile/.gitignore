@@ -1,0 +1,26 @@
+# 운영체제가 자동 생성하는 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터/IDE 설정
+.vscode/
+.idea/
+*.swp
+
+# 환경 변수 및 비밀 정보
+.env
+.env.*
+
+# 로그 및 임시 파일
+*.log
+*.tmp
+tmp/
+
+# 패키지 매니저 및 빌드 산출물 (도입 시 대비)
+node_modules/
+dist/
+build/
+
+# 로컬 Claude Code 설정
+.claude/settings.local.json
