@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>임** | HR Specialist</title>
+  <meta name="description" content="HRM 전반 업무경력 10년의 HR Specialist 임**의 프로필 페이지" />
+
+  <!-- 웹폰트: Pretendard(한글/본문), Instrument Serif(포인트 세리프) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind 설정: 다크 브라운 + 코랄 포인트 팔레트
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'system-ui', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+          },
+          colors: {
+            ink: '#2a1613',      // 배경 다크 브라운
+            card: '#3a231f',     // 어두운 카드 면
+            coral: '#ff5b3a',    // 주요 포인트 (버튼, 강조)
+            peach: '#ffb9a6',    // 보조 포인트 (로고, 세리프 강조)
+            cream: '#efe5e3',    // 밝은 패널 배경
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-ink font-sans text-white antialiased">
+
+  <!-- 상단 내비게이션 -->
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
+      <a href="#home" class="font-sans text-2xl font-bold tracking-tight text-peach">임**</a>
+
+      <!-- 데스크톱 메뉴 -->
+      <ul class="hidden items-center gap-12 text-[15px] md:flex">
+        <li><a href="#about" class="nav-link hover:text-peach">소개</a></li>
+        <li><a href="#skills" class="nav-link hover:text-peach">기술스택</a></li>
+        <li><a href="#contact" class="nav-link hover:text-peach">연락</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="cta hidden sm:inline-flex">
+          문의하기
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <!-- 모바일 햄버거 버튼 -->
+        <button id="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu"
+          class="grid h-10 w-10 place-items-center rounded-lg bg-card md:hidden">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- 모바일 메뉴 -->
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink/95 backdrop-blur md:hidden">
+      <ul class="flex flex-col px-5 py-3 text-base">
+        <li><a href="#about" class="block py-3 nav-link">소개</a></li>
+        <li><a href="#skills" class="block py-3 nav-link">기술스택</a></li>
+        <li><a href="#contact" class="block py-3 nav-link">연락</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative px-5 pb-16 pt-32 md:pt-40">
+      <div class="mx-auto max-w-6xl">
+        <!-- 대형 헤드라인 -->
+        <div class="relative">
+          <h1 class="reveal font-sans text-[3.25rem] font-medium leading-[0.95] tracking-[-0.04em] sm:text-7xl lg:text-[8.5rem]">
+            HR Specialist<span class="text-coral">.</span>
+          </h1>
+          <p class="reveal mt-1 flex flex-wrap items-baseline gap-x-4 font-sans text-[3.25rem] leading-[0.95] tracking-[-0.04em] sm:text-7xl lg:text-[8.5rem]">
+            <span class="font-serif italic text-peach">10 years</span>
+            <span class="font-medium">of HRM</span>
+          </p>
+
+          <!-- 우측 키워드 태그 -->
+          <ul class="reveal mt-8 flex flex-wrap gap-x-10 gap-y-2 text-lg text-white/80 md:absolute md:right-0 md:top-6 md:mt-0 md:flex-col md:items-end md:gap-4 lg:top-10">
+            <li>/HRM</li>
+            <li>/채용·인사관리</li>
+            <li>/AI 업무 자동화</li>
+          </ul>
+        </div>
+
+        <!-- 프로필 패널 -->
+        <div class="reveal mt-16 rounded-2xl bg-cream p-6 text-ink sm:p-10 lg:p-12">
+          <div class="grid gap-10 md:grid-cols-5">
+            <div class="flex flex-col justify-between md:col-span-3">
+              <div>
+                <p class="font-sans text-5xl font-medium tracking-[-0.03em] sm:text-7xl lg:text-8xl">임**</p>
+                <p class="mt-6 max-w-md text-base leading-relaxed text-ink/80 sm:text-lg">
+                  HRM 전반에서 10년간 실무를 쌓아 온 HR Specialist입니다.
+                  현장의 요구를 정확히 읽고, 데이터에 근거해 사람과 조직이 함께 성장하는 인사 체계를 만듭니다.
+                </p>
+              </div>
+              <a href="#contact" class="cta cta-dark mt-8 w-fit">
+                문의하기
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <!-- 프로필 이미지 자리 (사진 추가 시 img로 교체) -->
+            <div class="md:col-span-2">
+              <p class="font-sans text-sm font-semibold text-coral">/10 yrs</p>
+              <div class="mt-2 grid aspect-[4/5] place-items-center rounded-xl bg-gradient-to-br from-card to-ink">
+                <span class="font-serif text-8xl italic text-peach">임</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="px-5 py-24">
+      <div class="mx-auto grid max-w-6xl gap-12 md:grid-cols-3">
+        <div class="reveal">
+          <p class="font-serif text-xl italic text-peach">About</p>
+          <h2 class="mt-2 text-4xl font-medium tracking-[-0.03em] sm:text-5xl">소개</h2>
+        </div>
+
+        <div class="reveal md:col-span-2">
+          <p class="text-lg leading-relaxed text-white/80">
+            채용, 인사관리, 근태·평가·보상, 교육 등 HRM 전반의 업무를 경험했습니다.
+            제도를 만드는 데서 그치지 않고 현장에서 실제로 작동하도록 운영하는 것을 중요하게 생각합니다.
+          </p>
+
+          <div class="mt-10 grid grid-cols-2 gap-4">
+            <div class="card">
+              <p class="text-sm text-white/60">HRM 업무 경력</p>
+              <p class="mt-3 font-sans text-6xl font-medium tracking-tight text-coral">
+                <span data-count="10">0</span><span class="text-2xl text-white/80">년</span>
+              </p>
+            </div>
+            <div class="card">
+              <p class="text-sm text-white/60">업무 범위</p>
+              <p class="mt-3 font-sans text-2xl font-medium leading-snug">HRM 전반<br />실무 · 운영</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="px-5 py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p class="font-serif text-xl italic text-peach">Skills</p>
+            <h2 class="mt-2 text-4xl font-medium tracking-[-0.03em] sm:text-5xl">기술스택</h2>
+          </div>
+          <p class="max-w-sm text-white/70">업무에서 실제로 사용하는 도구입니다.</p>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2">
+          <article class="reveal card-lg">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-2xl font-medium">MS Office</h3>
+                <p class="mt-1 text-sm text-white/60">Excel · Word · PowerPoint</p>
+              </div>
+              <span class="font-serif text-4xl italic text-peach">01</span>
+            </div>
+            <p class="mt-6 text-white/80">인사 데이터 집계, 보고서 작성, 발표 자료 제작에 활용합니다.</p>
+            <div class="mt-8">
+              <div class="mb-2 flex justify-between text-xs text-white/60">
+                <span>숙련도</span><span>90%</span>
+              </div>
+              <div class="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                <div class="skill-bar h-full rounded-full bg-coral" data-level="90"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal card-lg">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-2xl font-medium">Claude Code</h3>
+                <p class="mt-1 text-sm text-white/60">AI 기반 코딩 에이전트</p>
+              </div>
+              <span class="font-serif text-4xl italic text-peach">02</span>
+            </div>
+            <p class="mt-6 text-white/80">업무 자동화 스크립트와 웹 페이지를 직접 만들고 개선하는 데 사용합니다.</p>
+            <div class="mt-8">
+              <div class="mb-2 flex justify-between text-xs text-white/60">
+                <span>숙련도</span><span>75%</span>
+              </div>
+              <div class="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                <div class="skill-bar h-full rounded-full bg-coral" data-level="75"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="px-5 pb-24">
+      <div class="reveal mx-auto max-w-6xl rounded-2xl bg-coral p-10 text-ink sm:p-16">
+        <p class="font-serif text-xl italic">Contact</p>
+        <h2 class="mt-3 max-w-2xl text-4xl font-medium tracking-[-0.03em] sm:text-6xl">
+          함께 이야기 나눠요
+        </h2>
+        <p class="mt-6 max-w-md text-ink/80">HR 업무와 관련된 제안이나 문의는 아래 이메일로 연락 주세요.</p>
+        <a href="mailto:example@email.com" class="cta cta-dark mt-10">
+          example@email.com
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 px-5 py-8 text-center text-sm text-white/50">
+    <p>© <span id="year"></span> 임**. All rights reserved.</p>
+  </footer>
+
+  <button id="to-top" type="button" aria-label="맨 위로"
+    class="fixed bottom-6 right-6 z-40 grid h-11 w-11 translate-y-4 place-items-center rounded-full bg-coral text-ink opacity-0 shadow-lg transition hover:brightness-110">
+    ↑
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

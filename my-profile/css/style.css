@@ -1,0 +1,105 @@
+/* 커스텀 스타일: Tailwind로 표현하기 어려운 부분만 정의 */
+
+html {
+  scroll-behavior: smooth;
+  /* 고정 내비게이션에 앵커가 가려지지 않도록 보정 */
+  scroll-padding-top: 5rem;
+}
+
+/* 공통 버튼: 코랄 그라데이션 pill 버튼 */
+.cta {
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #ff6a3d, #ff4a2b);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #fff;
+  box-shadow: 0 8px 24px -8px rgb(255 91 58 / 0.6);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  display: inline-flex;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* 밝은 배경 위의 버튼 */
+.cta-dark {
+  background: #2a1613;
+  color: #fff;
+  box-shadow: 0 8px 24px -10px rgb(42 22 19 / 0.6);
+}
+
+/* 다크 카드 */
+.card {
+  border-radius: 1rem;
+  background-color: #3a231f;
+  padding: 1.5rem;
+}
+
+.card-lg {
+  border-radius: 1.25rem;
+  background-color: #3a231f;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card-lg:hover {
+  transform: translateY(-4px);
+}
+
+/* 스크롤 시 나타나는 등장 애니메이션 (main.js에서 .is-visible 추가) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* 숙련도 바: JS에서 width를 채움 */
+.skill-bar {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 스크롤 후 고정 내비게이션 배경 (main.js에서 .is-scrolled 추가) */
+#navbar.is-scrolled {
+  background-color: rgb(42 22 19 / 0.85);
+  backdrop-filter: blur(12px);
+}
+
+/* 현재 섹션 내비게이션 링크 강조 (main.js에서 .is-active 추가) */
+.nav-link {
+  transition: color 0.2s ease;
+}
+
+.nav-link.is-active {
+  color: #ffb9a6;
+}
+
+/* 모션 감소를 요청한 사용자에게는 애니메이션 비활성화 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .skill-bar,
+  .card-lg,
+  .cta {
+    transition: none;
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+  }
+}
